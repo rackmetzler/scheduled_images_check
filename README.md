@@ -12,6 +12,8 @@ I use 'virtualenv' (python-virtualenv or python3-virtualenv) on Ubuntu 18.04 LTS
 It was only manually developed and tested on that Operating System.
 
 
+## Installing
+
 * Clone this repo
 
 git clone https://github.com/rackmetzler/scheduled_images_check
@@ -32,3 +34,15 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 
+
+## Example
+
+In the scheduled_images_check directory, inside an Activated Virtual Environment with requirements installed.
+
+### Show all servers on account, and define if it is valid or not.
+
+python scheduled_images_check/check.py CLOUDUSER CLOUDAPIKEY
+
+### Show only servers with scheduled images, where the latest image is over 24 hours old
+
+python scheduled_images_check/check.py --failed_only CLOUDUSER CLOUDAPIKEY
