@@ -16,24 +16,33 @@ It was only manually developed and tested on that Operating System.
 
 * Clone this repo
 
+```
 git clone https://github.com/rackmetzler/scheduled_images_check
+```
 
 * Change Directory
 
+```
 cd scheduled_images_check
+```
 
 * Create Virtual Environment
 
+```
 virtualenv --python /usr/bin/python3.6 venv
+```
 
 * Activate Virtual Environment
 
+```
 source venv/bin/activate
+```
 
 * Install Requirements
 
+```
 pip install -r requirements.txt
-
+```
 
 ## Example
 
@@ -45,6 +54,7 @@ python scheduled_images_check/check.py CLOUDUSER CLOUDAPIKEY
 
 #### Example Output
 
+```
 +--------+--------------------------------------+--------------+------------------+-----------+-------------------------------------------------------+----------------+
 | Region |              Server Id               | Server Name  |     Schedule     | Retention |                 Latest Scheduled Image                | Image < 24 hrs |
 +--------+--------------------------------------+--------------+------------------+-----------+-------------------------------------------------------+----------------+
@@ -85,7 +95,7 @@ python scheduled_images_check/check.py CLOUDUSER CLOUDAPIKEY
 |        |                                      |              |                  |           | | Updated At |         2018-12-18T07:34:37Z         | |                |
 |        |                                      |              |                  |           | +------------+--------------------------------------+ |                |
 +--------+--------------------------------------+--------------+------------------+-----------+-------------------------------------------------------+----------------+
-
+```
 
 ### Show only servers with scheduled images, where the latest image is over 24 hours old
 
@@ -93,6 +103,7 @@ python scheduled_images_check/check.py --failed_only CLOUDUSER CLOUDAPIKEY
 
 #### Example Output
 
+```
 +--------+--------------------------------------+--------------+------------------+-----------+-------------------------------------------------------+----------------+
 | Region |              Server Id               | Server Name  |     Schedule     | Retention |                 Latest Scheduled Image                | Image < 24 hrs |
 +--------+--------------------------------------+--------------+------------------+-----------+-------------------------------------------------------+----------------+
@@ -119,4 +130,4 @@ python scheduled_images_check/check.py --failed_only CLOUDUSER CLOUDAPIKEY
 |        |                                      |              |                  |           | | Updated At |         2018-12-16T14:09:49Z         | |                |
 |        |                                      |              |                  |           | +------------+--------------------------------------+ |                |
 +--------+--------------------------------------+--------------+------------------+-----------+-------------------------------------------------------+----------------+
-
+```
